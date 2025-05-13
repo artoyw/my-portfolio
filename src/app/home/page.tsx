@@ -3,6 +3,7 @@ import WindowLayout from '../../components/WindowLayout';
 import Image from 'next/image';
 import { Typewriter } from '../../components/Typewriter/index';
 import olivia1 from "@/src/assets/images/olivia1.jpg";
+import { SocialLinksDemo } from '../../components/SocialLinksDemo/index';
 
 export default function Home() {
   return (
@@ -32,16 +33,18 @@ export default function Home() {
                 </div>
 
                 <div className="flex flex-row items-start space-x-6 p-6">
-                <Image
-                    src={olivia1}
-                    alt="Olivia smiling"
-                    width={500}
-                    className="rounded-xl object-cover shadow-md"
-                    />
-                    <div className="text-black space-y-4">
+                    <Image
+                        src={olivia1}
+                        alt="Olivia smiling"
+                        width={500}
+                        className="rounded-xl object-cover shadow-md"
+                        />
+                    <div className="flex flex-col text-black space-y-4 items-start">
                         <p>💻 I'm interested in the intersection of tech, business, design, & applying them to create solutions. I also have a soft spot for hojicha🍵, taking walks at sunset🌇, and making impulse purchases💸🤭...</p>
                         <p>🌱 I believe in developing technology to make life more intuitive, inclusive, and joyful—whether that means simplifying the everyday or amplifying voices that deserve to be heard. For me, tech is a way to leave things better than I found them! 🕊️❤️ </p>
                         <p>💌 This is my corner of the web — feel free to click around and stay awhile 🌼🗺️</p>
+                        <br></br>
+                        <SocialLinksDemo />
                     </div>
                 </div>
             </div>
