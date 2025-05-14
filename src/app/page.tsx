@@ -67,7 +67,8 @@ export default function Home() {
 
   return (
     <main className="bg-black text-green-500 min-h-screen font-mono p-6 text-sm">
-      <pre className="mb-6 leading-snug">
+      <div className="max-w-screen mx-auto w-full items-start">
+      <pre className="mb-6 leading-snug overflow-x-auto text-xs sm:text-sm">
 {String.raw`
 
  ██████╗ ██╗     ██╗██╗   ██╗██╗ █████╗ ███████╗    ██╗    ██╗ ██████╗ ██████╗ ██╗     ██████╗ 
@@ -105,21 +106,22 @@ export default function Home() {
           ))}
 
         {!terminalLocked && (
-          <div className="flex items-center">
-            <span className="text-green-400">guest@oliviawang.com</span>
-            <span className="ml-2">~$</span>
+          <div className="flex flex-wrap items-center gap-2 mt-4">
+            <span className="text-green-400 whitespace-nowrap">guest@oliviawang.com</span>
+            <span className="ml-2 whitespace-nowrap">~$</span>
             <input
               autoFocus
               type="text"
               value={input}
               onChange={(e) => setInput(e.target.value)}
               onKeyDown={handleKeyDown}
-              className="bg-transparent border-none outline-none text-green-500 ml-2 w-full caret-green-400"
+              className="flex-1 bg-transparent border-none outline-none text-green-500 ml-2 w-full caret-green-400"
             />
           </div>
         )}
         </>
       )}
+      </div>
     </main>
   );
 }

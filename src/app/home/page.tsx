@@ -10,10 +10,7 @@ export default function Home() {
         <WindowLayout>
             <div className='flex flex-col space-y-4 w-[80vw] mx-auto flex flex-col'>
                 <IntroSection />
-                <ExperienceSection />
-
-                
-           
+                <ExperienceSection />           
             </div>
 
         </WindowLayout>
