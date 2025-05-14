@@ -7,9 +7,10 @@ const tabMap: { [key: string]: string } = {
   '/home': "Olivia's World",
   '/projects': 'Projects',
   '/resume': 'Resume',
+  '/about': 'About',
 };
 
-const tabs = ['Olivia\'s World', 'Projects', 'Resume'];
+const tabs = ['Olivia\'s World', 'Projects', 'About','Resume'];
 
 export default function WindowLayout({ children }: { children: React.ReactNode }) {
   const pathname = usePathname();
@@ -28,6 +29,9 @@ export default function WindowLayout({ children }: { children: React.ReactNode }
         break;
       case "Projects":
         router.push('/projects');
+        break;
+      case "About":
+        router.push('/about');
         break;
       case "Resume":
         router.push('/resume');
