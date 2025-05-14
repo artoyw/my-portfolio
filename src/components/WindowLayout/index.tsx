@@ -42,7 +42,7 @@ export default function WindowLayout({ children }: { children: React.ReactNode }
 
   return (
     <div className="min-h-screen w-full bg-gray-100 text-gray-100 font-mono">
-      <div className="flex items-center px-4 py-1 bg-gray-800 space-x-4 mb-0">
+      <div className="flex flex-wrap sm:flex-nowrap items-start sm:items-center  px-4 py-1 bg-gray-800 space-x-4 mb-0">
         <div className="flex space-x-2">
           <span className="w-3 h-3 bg-red-500 rounded-full cursor-pointer" 
             onClick={() => router.push('/')}></span>
@@ -52,21 +52,21 @@ export default function WindowLayout({ children }: { children: React.ReactNode }
 
         {/* tabs */}
         <div className="flex space-x-2">
-          <div className="flex space-x-2">
-          {tabs.map((tab) => (
-            <button
-              key={tab}
-              onClick={() => handleTabClick(tab)}
-              className={`px-4 py-1 rounded-t-xl transition-colors duration-200 ${
-                activeTab === tab
-                  ? 'bg-gray-900 text-green-400'
-                  : 'bg-gray-600 text-gray-400 hover:text-white'
-              }`}
-            >
-              {tab}
-            </button>
-          ))}
-        </div>
+          <div className="flex-1 flex overflow-x-auto space-x-2 scrollbar-thin scrollbar-thumb-gray-700 scrollbar-track-gray-900 max-w-full text-xs sm:text-base">
+            {tabs.map((tab) => (
+              <button
+                key={tab}
+                onClick={() => handleTabClick(tab)}
+                className={`px-4 py-1 rounded-t-xl whitespace-nowrap transition-colors duration-200 ${
+                  activeTab === tab
+                    ? 'bg-gray-900 text-green-400'
+                    : 'bg-gray-600 text-gray-400 hover:text-white'
+                }`}
+              >
+                {tab}
+              </button>
+            ))}
+          </div>
 
           <div className="px-4 py-1 bg-gray-600 rounded-t-xl text-gray-400 cursor-default">+</div>
         </div>
@@ -75,27 +75,27 @@ export default function WindowLayout({ children }: { children: React.ReactNode }
 
       {/* address bar */}
       <div className="bg-gray-900 px-4 py-2 text-center w-full mt-0">
-        <div className="flex items-center gap-4 w-full mx-auto">
+        <div className="flex flex-wrap items-center gap-4 w-full mx-auto">
           
           {/* nav buts*/}
-          <button className="flex items-center text-lg justify-center text-gray-200">
+          <button className="text-lg text-sm sm:text-base text-gray-200">
             ←
           </button>
-          <button className="flex items-center text-lg justify-center text-gray-200">
+          <button className="text-lg text-sm sm:text-base text-gray-200">
             →
           </button>
-          <button className="pt-1 flex items-center text-m justify-center text-gray-200">
+          <button className="pt-1 text-m text-sm sm:text-base text-gray-200">
             ↻
           </button>
 
         
-        <div className="text-left bg-gray-700 px-4 py-1 rounded-full inline-block text-gray-300 w-full">
+        <div className=" flex-1 min-w-0 text-left bg-gray-700 px-4 py-1 rounded-full inline-block text-gray-300 w-full overflow-x-auto whitespace-nowrap text-xs sm:text-sm md:text-base">
           https://oliviawang.com/{activeTab.toLowerCase().replace(/ /g, '-')}
         </div>
         </div>
       </div>
 
-      <main className="p-6">{children}</main>
+      <main className="p-6 sm:p-6">{children}</main>
     </div>
   );
 }

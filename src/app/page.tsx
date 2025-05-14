@@ -68,7 +68,7 @@ export default function Home() {
   return (
     <main className="bg-black text-green-500 min-h-screen font-mono p-6 text-sm">
       <div className="max-w-screen mx-auto w-full items-start">
-      <pre className="mb-6 leading-snug overflow-x-auto text-xs sm:text-sm">
+      <pre className="mb-6 leading-snug overflow-x-auto text-xs sm:text-sm scrollbar-thin scrollbar-thumb-gray-800 scrollbar-track-gray-900">
 {String.raw`
 
  ██████╗ ██╗     ██╗██╗   ██╗██╗ █████╗ ███████╗    ██╗    ██╗ ██████╗ ██████╗ ██╗     ██████╗ 
@@ -106,7 +106,7 @@ export default function Home() {
           ))}
 
         {!terminalLocked && (
-          <div className="flex flex-wrap items-center gap-2 mt-4">
+          <div className="flex flex-wrap items-center">
             <span className="text-green-400 whitespace-nowrap">guest@oliviawang.com</span>
             <span className="ml-2 whitespace-nowrap">~$</span>
             <input
