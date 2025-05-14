@@ -42,8 +42,8 @@ export default function WindowLayout({ children }: { children: React.ReactNode }
 
   return (
     <div className="min-h-screen w-full bg-gray-100 text-gray-100 font-mono">
-      <div className="flex flex-wrap sm:flex-nowrap items-start sm:items-center  px-4 py-1 bg-gray-800 space-x-4 mb-0">
-        <div className="flex space-x-2">
+      <div className="flex flex-wrap w-full overflow-x-auto sm:flex-nowrap items-start sm:items-center px-4 py-1 bg-gray-800 space-x-4 mb-0 sm:gap-4">
+        <div className="max-w-full flex space-x-2">
           <span className="w-3 h-3 bg-red-500 rounded-full cursor-pointer" 
             onClick={() => router.push('/')}></span>
           <span className="w-3 h-3 bg-yellow-400 rounded-full"></span>
@@ -51,7 +51,7 @@ export default function WindowLayout({ children }: { children: React.ReactNode }
         </div>
 
         {/* tabs */}
-        <div className="flex space-x-2">
+        <div className="max-w-full flex space-x-2">
           <div className="flex-1 flex overflow-x-auto space-x-2 scrollbar-thin scrollbar-thumb-gray-700 scrollbar-track-gray-900 max-w-full text-xs sm:text-base">
             {tabs.map((tab) => (
               <button
@@ -74,8 +74,8 @@ export default function WindowLayout({ children }: { children: React.ReactNode }
       </div>
 
       {/* address bar */}
-      <div className="bg-gray-900 px-4 py-2 text-center w-full mt-0">
-        <div className="flex flex-wrap items-center gap-4 w-full mx-auto">
+      <div className="bg-gray-900 px-4 py-2 text-center w-full overflow-x-auto mt-0">
+        <div className="flex flex-wrap items-center gap-4 max-w-full mx-auto">
           
           {/* nav buts*/}
           <button className="text-lg text-sm sm:text-base text-gray-200">
