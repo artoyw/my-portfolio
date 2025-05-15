@@ -6,11 +6,11 @@ import { useState, useEffect } from 'react';
 const tabMap: { [key: string]: string } = {
   '/home': "Olivia's World",
   '/projects': 'Projects',
-  '/resume': 'Resume',
+  //'/resume': 'Resume',
   '/about': 'About',
 };
 
-const tabs = ['Olivia\'s World', 'Projects', 'About','Resume'];
+const tabs = ['Olivia\'s World', 'Projects', 'About'];
 
 export default function WindowLayout({ children }: { children: React.ReactNode }) {
   const pathname = usePathname();
@@ -33,9 +33,9 @@ export default function WindowLayout({ children }: { children: React.ReactNode }
       case "About":
         router.push('/about');
         break;
-      case "Resume":
-        router.push('/resume');
-        break;
+      // case "Resume":
+      //   router.push('/resume');
+      //   break;
     }
   };
 
