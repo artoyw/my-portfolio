@@ -15,7 +15,7 @@ function WaveText({
     return (
         <motion.span
             className={cn(
-                "w-full text-center inline-block cursor-pointer text-9xl transition-all",
+                "w-full inline-block cursor-pointer transition-all",
                 className
             )}
             whileHover="hover"

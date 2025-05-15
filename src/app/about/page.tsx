@@ -1,22 +1,19 @@
 'use client';
 import WindowLayout from '../../components/WindowLayout';
 import Image from 'next/image';
-import { Typewriter } from '../../components/Typewriter/index';
 import olivia1 from "@/src/assets/images/olivia1.jpg";
-import { ExperienceBlock } from '../../components/ExperienceBlock';
-import crowdstrike from "@/src/assets/images/crowdstrike.png";
-import crowdstrike2 from "@/src/assets/images/crowdstrike2.jpg";
-import tpeo from "@/src/assets/images/tpeo.png";
-import tpeo2 from "@/src/assets/images/tpeo2.jpeg";
+import {WaveText} from '../../components/WaveText';
 
 
-export default function Home() {
+export default function About() {
   return (
     <main className="min-h-screen bg-white flex justify-center items-center">
         <WindowLayout>
             <div className='flex flex-col space-y-4 w-[80vw] mx-auto flex flex-col'>
-                <div className="text-left text-6xl font-bold text-gray-800 mt-10 mb-5">
-                    Hello, I'm Olivia!
+                <div className="text-left text-8xl font-bold text-gray-800 mt-10 mb-5">
+                    <WaveText
+                        text="Hi, I'm Olivia!"
+                    />
                 </div>
 
                 <div className="flex flex-row items-start space-x-6">

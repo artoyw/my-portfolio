@@ -12,7 +12,7 @@ export default function Projects() {
     <main className="min-h-screen bg-white flex justify-center items-center">
       <WindowLayout>
         <div>
-          <div className="text-left text-black font-bold text-3xl mb-10">
+          <div className="text-center text-black font-bold text-8xl mb-5">
             <WaveText
               text="Projects"
             />
