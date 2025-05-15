@@ -1,4 +1,5 @@
 import React from "react";
+import { WaveText } from "../WaveText";
 
 interface ExperienceBlockProps {
   company: string;
@@ -32,7 +33,7 @@ export const ExperienceBlock: React.FC<ExperienceBlockProps> = ({
             className="w-[3.5rem] h-[3.5rem] md:w-[4rem] md:h-[4rem] rounded-xl shadow object-contain"
             alt={`${company} logo`}
           />
-          <span className="text-black">{company}</span>
+          <span className="text-black transition-transform duration-500 ease-in-out hover:scale-105">{company}</span>
         </h2>
         <div className="inline-block rounded-full bg-gray-300 px-3 py-1 text-[clamp(0.75rem,1.5vw,0.9rem)] font-semibold text-gray-800">
           {title}
